@@ -777,27 +777,29 @@
       <section id="about">
         <h2 class="section-heading">About Me</h2>
         <p class="section-subtitle">
-          I’m a full-stack developer focused on creating smooth, reliable web applications and adding practical AI agents that improve real-world workflows.
+          <!-- Hero bio -->
+          I'm a full-stack developer who enjoys building web applications end-to-end and exploring
+          how AI tools can be wired into real products to solve practical problems.        
         </p>
 
         <div class="about-grid">
 
             <div class="about-card">
-                <h3>What I Work On</h3>
-                    <ul class="about-list">
-                        <li>Full-stack web applications using Python, Flask, JavaScript, and Vue.js etc.</li>
-                        <li>RESTful APIs with proper authentication, role-based access, and clean architecture.</li>
-                        <li>Database-driven systems with SQLAlchemy, optimized queries, and well-designed schemas.</li>
-                    </ul>
-            </div>
-            
-            <div class="about-card">
-                    <ul class="about-list">
-                        <li>Real-world app features like caching (Redis), background tasks (Celery), and CSV/Excel exports.</li>
-                        <li>Admin dashboards, user portals, and interactive UI components built with Vue.js and Bootstrap.</li>
-                        <li>AI-powered features using Agentic AI workflows, LLM integrations, and prompt-driven automation.</li>
-                    </ul>
-            </div>
+              <h3>What I Work On</h3>
+              <ul class="about-list">
+                  <li>Full-stack web apps using Python, Flask, JavaScript, Vue.js, and React — from backend logic to frontend UI.</li>
+                  <li>RESTful APIs with authentication, role-based access control, and PostgreSQL/SQLite databases via SQLAlchemy.</li>
+                  <li>Production features like Redis caching, Celery background tasks, and cloud-hosted databases (Supabase).</li>
+              </ul>
+          </div>
+          
+          <div class="about-card">
+              <ul class="about-list">
+                  <li>AI integrations using Google Gemini API — including multi-agent workflows, prompt design, and fallback logic.</li>
+                  <li>Admin dashboards and user portals with interactive charts (Chart.js), Bootstrap, and Tailwind CSS.</li>
+                  <li>Learning continuously — currently deepening skills in system design, cloud (Google Cloud), and agentic AI.</li>
+              </ul>
+          </div>
         </div>
       </section>
 
@@ -809,6 +811,30 @@
         </p>
 
         <div class="projects-grid">
+
+            <article class="project-card">
+                  <h3 class="project-title">Quiz Master Platform</h3>
+                  <p class="project-desc">
+                      A full-stack AI-powered quiz platform built with Flask, PostgreSQL, and Supabase where students can generate adaptive MCQ quizzes using Google Gemini API, compete through an XP-based leaderboard system, and monitor learning progress with interactive analytics dashboards. Features secure SQL-backed session authentication with session regeneration, anti-cache security headers to prevent cross-user data leakage, role-based access control (Admin/User), real-time AJAX answer saving, AI fair-use quotas, multi-difficulty quiz modes, and a 3-attempt review system with performance tracking.
+                  </p>
+                  <div class="project-tags">
+                      <span class="project-tag">Flask</span>
+                      <span class="project-tag">Python</span>
+                      <span class="project-tag">PostgreSQL</span>
+                      <span class="project-tag">Supabase</span>
+                      <span class="project-tag">SQLAlchemy</span>
+                      <span class="project-tag">Gemini API</span>
+                      <span class="project-tag">Tailwind CSS</span>
+                      <span class="project-tag">Chart.js</span>
+                      <span class="project-tag">Flask-Session</span>
+                      <span class="project-tag">Render</span>
+                  </div>
+                  <div class="project-links">
+                      <a href="https://quiz-master-058v.onrender.com/" target="_blank">Live Demo</a>
+                      <a href="https://github.com/Ritik-Gupta8/Quiz_Master_App" target="_blank">GitHub</a>
+                  </div>
+              </article>
+          
             <article class="project-card">
                 <h3 class="project-title">Smart Parking Management System</h3>
                 <p class="project-desc">
@@ -848,23 +874,7 @@
             </article>
 
 
-            <article class="project-card">
-                <h3 class="project-title">Quiz Master Platform</h3>
-                <p class="project-desc">
-                    A full-featured quiz platform with admin dashboard, dynamic quiz creation, user roles, score tracking, and results analytics.
-                </p>
-                <div class="project-tags">
-                    <span class="project-tag">Flask</span>
-                    <span class="project-tag">Python</span>
-                    <span class="project-tag">SQLite / SQLAlchemy</span>
-                    <span class="project-tag">JavaScript</span>
-                    <span class="project-tag">Bootstrap</span>
-                </div>
-                <div class="project-links">
-                    <a href="https://quiz-master-app-1.onrender.com/" target="_blank">Live Demo</a>
-                    <a href="https://github.com/Ritik-Gupta8/Quiz_Master_App" target="_blank">GitHub</a>
-                </div>
-            </article>
+            
             
         </div>
       </section>
