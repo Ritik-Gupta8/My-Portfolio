@@ -156,12 +156,7 @@ export default function Hero() {
             </div>
           </div>
 
-          <div className="mt-6 rounded-xl border border-white/10 bg-night/40 p-4">
-            <p className="font-display text-2xl font-bold text-gradient">2026</p>
-            <p className="mt-1 text-xs leading-snug text-muted">
-              Graduating IIT Madras — B.S. Data Science
-            </p>
-          </div>
+          
         </motion.div>
 
         {/* Stats tiles */}
