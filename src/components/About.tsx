@@ -44,7 +44,7 @@ export default function About() {
             transition={{ duration: 0.45, delay: i * 0.08 }}
             className="group rounded-2xl border border-white/10 bg-white/[0.03] p-6 backdrop-blur transition-all hover:-translate-y-1 hover:border-accent/30"
           >
-            <div className="grid h-11 w-11 place-items-center rounded-xl bg-accent/10 text-accent transition-colors group-hover:bg-accent group-hover:text-base">
+            <div className="grid h-11 w-11 place-items-center rounded-xl bg-accent/10 text-accent transition-colors group-hover:bg-accent group-hover:text-night">
               <p.icon size={20} />
             </div>
             <h3 className="mt-4 font-display text-lg font-semibold text-ink">{p.title}</h3>
