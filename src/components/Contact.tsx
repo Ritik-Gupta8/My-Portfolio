@@ -53,7 +53,7 @@ export default function Contact() {
               href={`mailto:${profile.email}`}
               className="group flex items-center gap-4 rounded-xl border border-white/5 bg-white/[0.02] p-4 transition-colors hover:border-accent/30"
             >
-              <span className="grid h-10 w-10 shrink-0 place-items-center rounded-lg bg-accent/10 text-accent group-hover:bg-accent group-hover:text-base">
+              <span className="grid h-10 w-10 shrink-0 place-items-center rounded-lg bg-accent/10 text-accent group-hover:bg-accent group-hover:text-night">
                 <Mail size={18} />
               </span>
               <span className="min-w-0">
@@ -66,7 +66,7 @@ export default function Contact() {
               href={`tel:${profile.phone.replace(/[^+\d]/g, "")}`}
               className="group flex items-center gap-4 rounded-xl border border-white/5 bg-white/[0.02] p-4 transition-colors hover:border-accent/30"
             >
-              <span className="grid h-10 w-10 shrink-0 place-items-center rounded-lg bg-accent/10 text-accent group-hover:bg-accent group-hover:text-base">
+              <span className="grid h-10 w-10 shrink-0 place-items-center rounded-lg bg-accent/10 text-accent group-hover:bg-accent group-hover:text-night">
                 <Phone size={18} />
               </span>
               <span>
@@ -129,14 +129,14 @@ export default function Contact() {
               rows={4}
               required
               placeholder="Tell me a bit about what you're building…"
-              className="rounded-xl border border-white/10 bg-base/60 px-4 py-3 text-sm text-ink outline-none transition-all placeholder:text-faint focus:border-accent focus:ring-1 focus:ring-accent/40"
+              className="rounded-xl border border-white/10 bg-night/60 px-4 py-3 text-sm text-ink outline-none transition-all placeholder:text-faint focus:border-accent focus:ring-1 focus:ring-accent/40"
             />
           </div>
 
           <button
             type="submit"
             disabled={status === "sending"}
-            className="inline-flex items-center justify-center gap-2 rounded-full bg-gradient-to-r from-accent to-accent-2 px-6 py-3 text-sm font-semibold text-base shadow-lg shadow-accent/30 transition-transform hover:-translate-y-0.5 disabled:cursor-not-allowed disabled:opacity-60"
+            className="inline-flex items-center justify-center gap-2 rounded-full bg-gradient-to-r from-accent to-accent-2 px-6 py-3 text-sm font-semibold text-white shadow-lg shadow-accent/30 transition-transform hover:-translate-y-0.5 disabled:cursor-not-allowed disabled:opacity-60"
           >
             <Send size={16} />
             {status === "sending" ? "Sending…" : "Send Message"}
@@ -182,7 +182,7 @@ function Field({
         type={type}
         required={required}
         placeholder={placeholder}
-        className="rounded-xl border border-white/10 bg-base/60 px-4 py-3 text-sm text-ink outline-none transition-all placeholder:text-faint focus:border-accent focus:ring-1 focus:ring-accent/40"
+        className="rounded-xl border border-white/10 bg-night/60 px-4 py-3 text-sm text-ink outline-none transition-all placeholder:text-faint focus:border-accent focus:ring-1 focus:ring-accent/40"
       />
     </div>
   );
