@@ -43,7 +43,7 @@ export default function Timeline() {
                 }`}
               >
                 <span
-                  className={`absolute left-0 top-1 grid h-8 w-8 place-items-center rounded-full border border-accent/40 bg-base text-accent md:left-auto ${
+                  className={`absolute left-0 top-1 grid h-8 w-8 place-items-center rounded-full border border-accent/40 bg-night text-accent md:left-auto ${
                     alignRight ? "md:-left-4" : "md:-right-4"
                   }`}
                 >
