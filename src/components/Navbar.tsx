@@ -27,13 +27,13 @@ export default function Navbar() {
     <header
       className={`fixed inset-x-0 top-0 z-50 transition-all duration-300 ${
         scrolled
-          ? "border-b border-white/5 bg-base/70 backdrop-blur-xl"
+          ? "border-b border-white/5 bg-night/70 backdrop-blur-xl"
           : "bg-transparent"
       }`}
     >
       <nav className="mx-auto flex max-w-6xl items-center justify-between px-5 py-4">
         <a href="#home" className="group flex items-center gap-2.5">
-          <span className="grid h-9 w-9 place-items-center rounded-xl bg-gradient-to-br from-accent via-accent-2 to-accent-3 text-sm font-bold text-base shadow-lg shadow-accent/30">
+          <span className="grid h-9 w-9 place-items-center rounded-xl bg-gradient-to-br from-accent via-accent-2 to-accent-3 text-sm font-bold text-night shadow-lg shadow-accent/30">
             RG
           </span>
           <span className="font-display text-sm font-semibold tracking-wide text-ink">
@@ -56,7 +56,7 @@ export default function Navbar() {
             href={profile.resumeUrl}
             target="_blank"
             rel="noreferrer"
-            className="inline-flex items-center gap-2 rounded-full border border-accent/40 bg-accent/10 px-4 py-2 text-sm font-medium text-accent transition-all hover:bg-accent hover:text-base"
+            className="inline-flex items-center gap-2 rounded-full border border-accent/40 bg-accent/10 px-4 py-2 text-sm font-medium text-accent transition-all hover:bg-accent hover:text-night"
           >
             <FileText size={15} />
             Resume
@@ -79,7 +79,7 @@ export default function Navbar() {
             animate={{ opacity: 1, height: "auto" }}
             exit={{ opacity: 0, height: 0 }}
             transition={{ duration: 0.25 }}
-            className="overflow-hidden border-t border-white/5 bg-base/95 backdrop-blur-xl md:hidden"
+            className="overflow-hidden border-t border-white/5 bg-night/95 backdrop-blur-xl md:hidden"
           >
             <div className="flex flex-col gap-1 px-5 py-4">
               {links.map((l) => (
@@ -97,7 +97,7 @@ export default function Navbar() {
                 target="_blank"
                 rel="noreferrer"
                 onClick={() => setOpen(false)}
-                className="mt-2 inline-flex items-center gap-2 rounded-lg bg-accent px-3 py-2.5 text-sm font-medium text-base"
+                className="mt-2 inline-flex items-center gap-2 rounded-lg bg-accent px-3 py-2.5 text-sm font-medium text-night"
               >
                 <FileText size={15} />
                 View Resume
