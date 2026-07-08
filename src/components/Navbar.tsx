@@ -79,15 +79,15 @@ export default function Navbar() {
             animate={{ opacity: 1, height: "auto" }}
             exit={{ opacity: 0, height: 0 }}
             transition={{ duration: 0.25 }}
-            className="overflow-hidden border-t border-white/5 bg-night/95 backdrop-blur-xl md:hidden"
+            className="relative z-50 overflow-hidden border-t border-white/5 bg-night/95 backdrop-blur-xl md:hidden"
           >
-            <div className="flex flex-col gap-1 px-5 py-4">
+            <div className="relative z-50 flex flex-col gap-1 px-5 py-4">
               {links.map((l) => (
                 <a
                   key={l.href}
                   href={l.href}
                   onClick={() => setOpen(false)}
-                  className="rounded-lg px-3 py-2.5 text-sm text-muted transition-colors hover:bg-white/5 hover:text-ink"
+                  className="cursor-pointer rounded-lg px-3 py-2.5 text-sm text-muted transition-colors hover:bg-white/5 hover:text-ink"
                 >
                   {l.label}
                 </a>
