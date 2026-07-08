@@ -4,17 +4,22 @@
   --font-sans: "Inter", system-ui, -apple-system, "Segoe UI", sans-serif;
   --font-display: "Space Grotesk", "Inter", sans-serif;
 
-  --color-base: #060814;
-  --color-surface: #0b0f1e;
-  --color-surface-2: #101627;
+  /* Electric Indigo — the leading 2026 dark-mode palette for developer
+     portfolios: near-black stage, indigo/violet as hero color, cyan +
+     fuchsia as supporting accents for gradients and glows.
+     Named "night" (not "base") to avoid clashing with Tailwind's
+     built-in `text-base` font-size utility. */
+  --color-night: #05050c;
+  --color-surface: #0c0c18;
+  --color-surface-2: #12111f;
 
-  --color-accent: #38bdf8;
-  --color-accent-2: #818cf8;
-  --color-accent-3: #f472b6;
+  --color-accent: #6366f1;
+  --color-accent-2: #22d3ee;
+  --color-accent-3: #e879f9;
 
-  --color-ink: #e6ebf5;
-  --color-muted: #94a3b8;
-  --color-faint: #64748b;
+  --color-ink: #f1f1f7;
+  --color-muted: #9a9ab3;
+  --color-faint: #68687f;
 }
 
 :root {
@@ -32,7 +37,7 @@ body {
 }
 
 body {
-  background-color: var(--color-base);
+  background-color: var(--color-night);
   color: var(--color-ink);
   font-family: var(--font-sans);
   -webkit-font-smoothing: antialiased;
@@ -41,7 +46,7 @@ body {
 }
 
 ::selection {
-  background: rgba(56, 189, 248, 0.3);
+  background: rgba(99, 102, 241, 0.35);
   color: #fff;
 }
 
@@ -50,15 +55,15 @@ body {
   width: 10px;
 }
 ::-webkit-scrollbar-track {
-  background: #060814;
+  background: #05050c;
 }
 ::-webkit-scrollbar-thumb {
-  background: #1e293b;
+  background: #1e1e33;
   border-radius: 999px;
-  border: 2px solid #060814;
+  border: 2px solid #05050c;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: #334155;
+  background: #33335a;
 }
 
 /* Utility: animated gradient text */
@@ -91,10 +96,10 @@ body {
 .bg-grid {
   background-image: linear-gradient(
       to right,
-      rgba(148, 163, 184, 0.06) 1px,
+      rgba(148, 163, 184, 0.07) 1px,
       transparent 1px
     ),
-    linear-gradient(to bottom, rgba(148, 163, 184, 0.06) 1px, transparent 1px);
+    linear-gradient(to bottom, rgba(148, 163, 184, 0.07) 1px, transparent 1px);
   background-size: 56px 56px;
 }
 
@@ -109,4 +114,56 @@ body {
   66% {
     transform: translate(-25px, 25px) scale(0.95);
   }
+}
+
+/* Bento / glass card with a cursor-reactive spotlight highlight.
+   The --x / --y custom properties are set inline via JS on mousemove. */
+.spotlight-card {
+  position: relative;
+  isolation: isolate;
+}
+
+.spotlight-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background: radial-gradient(
+    500px circle at var(--x, 50%) var(--y, 50%),
+    rgba(99, 102, 241, 0.16),
+    transparent 60%
+  );
+  opacity: 0;
+  transition: opacity 0.35s ease;
+  pointer-events: none;
+  z-index: -1;
+}
+
+.spotlight-card:hover::before {
+  opacity: 1;
+}
+
+/* Infinite horizontal marquee for the tech-stack strip */
+@keyframes marquee-scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-marquee {
+  animation: marquee-scroll 32s linear infinite;
+}
+
+.pause-on-hover:hover .animate-marquee {
+  animation-play-state: paused;
+}
+
+/* Noise texture overlay for a tactile, premium finish */
+.bg-noise {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.4'/%3E%3C/svg%3E");
+  opacity: 0.035;
+  mix-blend-mode: overlay;
 }
