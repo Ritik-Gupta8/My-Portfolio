@@ -12,7 +12,7 @@ export default function Projects() {
         subtitle="Production-grade builds focused on reliability, clean interfaces, and real-world AI features — most are live and deployed."
       />
 
-      <div className="grid gap-6 lg:grid-cols-2">
+      <div className="grid gap-6 md:grid-cols-2">
         {projects.map((p, i) => (
           <motion.article
             key={p.title}
@@ -21,7 +21,7 @@ export default function Projects() {
             viewport={{ once: true, margin: "-60px" }}
             transition={{ duration: 0.5, delay: (i % 2) * 0.1 }}
             className={`group relative flex flex-col rounded-2xl border border-white/10 bg-white/[0.03] p-6 backdrop-blur transition-all hover:-translate-y-1 hover:border-accent/30 ${
-              p.featured ? "lg:ring-1 lg:ring-accent/10" : ""
+              p.featured ? "md:ring-1 md:ring-accent/10" : ""
             }`}
           >
             <div className="flex items-start justify-between gap-4">
