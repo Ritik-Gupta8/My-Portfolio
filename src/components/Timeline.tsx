@@ -21,7 +21,7 @@ export default function Timeline() {
       <SectionHeading
         eyebrow="Journey"
         title="Education, experience & certifications"
-        subtitle="From an IIT Madras Data Science degree to hands-on internships and cloud/AI certifications."
+        subtitle="From an IIT Madras degree to hands-on internships and cloud/AI certifications."
       />
 
       <div className="relative">
@@ -65,7 +65,27 @@ export default function Timeline() {
                     {item.title}
                   </h3>
                   <p className="mt-0.5 text-sm text-muted">{item.org}</p>
-                  <p className="mt-2 text-sm leading-relaxed text-faint">{item.detail}</p>
+                  {Array.isArray(item.detail) ? (
+                    <ul className="mt-3 space-y-2 text-sm leading-relaxed text-faint">
+                      {item.detail.map((bullet, idx) => (
+                        <li
+                          key={idx}
+                          className={`relative ${
+                            alignRight ? "pl-4" : "pl-4 md:pl-0 md:pr-4"
+                          }`}
+                        >
+                          <span
+                            className={`absolute top-2 h-1.5 w-1.5 rounded-full bg-accent/60 ${
+                              alignRight ? "left-0" : "left-0 md:left-auto md:right-0"
+                            }`}
+                          />
+                          {bullet}
+                        </li>
+                      ))}
+                    </ul>
+                  ) : (
+                    <p className="mt-2 text-sm leading-relaxed text-faint">{item.detail}</p>
+                  )}
                 </div>
               </motion.div>
             );
