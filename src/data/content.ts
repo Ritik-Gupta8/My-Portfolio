@@ -94,9 +94,38 @@ export type Project = {
 
 export const projects: Project[] = [
   {
-    title: "KrishiRakshak — AI Crop & Livestock Doctor",
+    title: "OrbitKeeper — Autonomous AI Career Agent",
     year: "2026",
     featured: true,
+    blurb:
+      "Autonomous, multi-agent career copilot orchestrating six specialized Gemini-powered agents to score job fit, map skill gaps, and manage application deadlines.",
+    highlights: [
+      "Orchestrated 6 autonomous agents (Job Analysis, Resume Analysis, Career Planning, Interview Prep, Career Memory, Deadline Monitoring) using Gemini 3.5 Flash via Google Agent Platform.",
+      "Implemented a custom MongoDB MCP Server with 14 schema-validated tools for long-term database state management, eliminating direct database imports.",
+      "Developed a 24/7 background deadline monitor using node-cron and Gmail SMTP to autonomously send 24h & 12h email reminders to users.",
+    ],
+    tags: ["Google Agent Platform", "Gemini 3.5 Flash", "MongoDB MCP", "React", "Node.js", "Firebase Auth"],
+    demo: "https://orbitkeeper.vercel.app",
+    github: "https://github.com/Ritik-Gupta8/OrbitKeeper",
+  },
+  {
+    title: "Chaupal.AI — Multilingual Voice AI Agricultural Platform",
+    year: "2026",
+    featured: true,
+    blurb:
+      "A voice-first, multilingual AI decision-making platform for climate-resilient farming, featuring crop disease diagnosis, risk scoring, and interactive voice assistant.",
+    highlights: [
+      "Built an end-to-end voice pipeline using Sarvam Saarika (STT) and Bulbul (TTS) to provide full audio input/output loop in 5 Indian languages.",
+      "Designed crop disease vision pipeline with Google Gemini Vision and a multi-agent system in FastAPI for risk calculation and weather intelligence.",
+      "Engineered a high-performance analytics dashboard serving a 500K-record BigQuery warehouse, achieving 22.58x data processing speedup using NVIDIA RAPIDS cuDF.",
+    ],
+    tags: ["FastAPI", "Next.js", "Sarvam AI", "Gemini Vision", "Google BigQuery", "NVIDIA RAPIDS", "TypeScript"],
+    demo: "https://chaupal-ai.vercel.app",
+    github: "https://github.com/yash0238/Chaupal.AI",
+  },
+  {
+    title: "KrishiRakshak — AI Crop & Livestock Doctor",
+    year: "2026",
     blurb:
       "Bilingual (Hindi/Marathi) multimodal disease-detection app built for the AWS AI for Bharat Hackathon, targeting low-connectivity rural farmers.",
     highlights: [
@@ -110,7 +139,6 @@ export const projects: Project[] = [
   {
     title: "Quiz Master — AI-Powered Adaptive Quiz Platform",
     year: "2026",
-    featured: true,
     blurb:
       "Production-grade, multi-role quiz platform with zero-cost AI generation and robust concurrent session handling.",
     highlights: [
