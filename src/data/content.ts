@@ -23,7 +23,7 @@ export const profile = {
     { value: "8-model", label: "AI fallback chain built for 99%+ uptime" },
     { value: "15+", label: "REST API endpoints designed & stress-tested" },
     { value: "$0", label: "Cost AI generation at production scale" },
-    { value: "IIT", label: "Madras — B.S. Data Science" },
+    { value: "IIT", label: "Madras — B.S. (Programming)" },
   ],
 };
 
@@ -39,7 +39,7 @@ export const skillGroups: { title: string; skills: string[] }[] = [
       "SQL",
       "Flask",
       "React.js",
-      "Vue.js",
+      "Node.js",
       "Tailwind CSS",
     ],
   },
@@ -62,7 +62,6 @@ export const skillGroups: { title: string; skills: string[] }[] = [
       "PostgreSQL",
       "Supabase",
       "Redis",
-      "SQLite",
     ],
   },
   {
@@ -129,9 +128,9 @@ export const projects: Project[] = [
     blurb:
       "Bilingual (Hindi/Marathi) multimodal disease-detection app built for the AWS AI for Bharat Hackathon, targeting low-connectivity rural farmers.",
     highlights: [
-      "Vision-language pipeline on Gemini 2.5 Flash with two-stage prompt chaining: image validation then structured JSON (disease, severity, treatment, prevention).",
-      "Integrated OpenWeather API for humidity/temperature-based risk alerts.",
-      "AWS backend (S3 + DynamoDB) with client-side image compression for offline-capable delivery, deployed live on EC2.",
+      "Built a bilingual (Hindi/Marathi) multimodal disease-detection app for the AWS AI for Bharat Hackathon, targeting low-connectivity rural users.",
+      "Engineered a vision-language pipeline using Gemini 2.5 Flash with two-stage prompt chaining (image validation and structured JSON output); integrated OpenWeather API for weather-based risk alerts; architected AWS backend (S3 + DynamoDB) with client-side image compression for offline-capable PWA delivery.",
+      "Delivered a live, EC2-deployed prototype with a Chart.js analytics dashboard tracking diagnosis history and severity trends; accepted as a qualified hackathon submission.",
     ],
     tags: ["Flask", "Gemini 2.5 Flash", "AWS S3", "DynamoDB", "EC2", "PWA", "Chart.js"],
     github: "https://github.com/Ritik-Gupta8",
@@ -142,9 +141,10 @@ export const projects: Project[] = [
     blurb:
       "Production-grade, multi-role quiz platform with zero-cost AI generation and robust concurrent session handling.",
     highlights: [
-      "8-model free-tier fallback chain across Gemini variants for 99%+ AI uptime at $0 cost.",
-      "SHA-256 SQL response caching to eliminate redundant LLM calls and cut repeat-query latency.",
-      "Anti-cache-poisoning headers, session scoping for multi-user isolation, XP leaderboard, and real-time Chart.js analytics.",
+      "Generic quiz tools lack adaptive AI generation, cost reliability, and concurrent multi-user isolation.",
+      "Developed a production-grade, multi-role quiz platform with zero-cost AI generation and robust session handling.",
+      "Designed an 8-model free-tier fallback chain across Gemini variants to ensure 99%+ AI uptime; implemented SHA-256 SQL response caching to eliminate redundant LLM calls; enforced anti-cache-poisoning headers and session scoping for multi-tenant data isolation; built XP-based leaderboards and real-time Chart.js analytics.",
+      "Platform live on Render with Supabase-hosted PostgreSQL supporting multi-user concurrent sessions; caching measurably reduced repeat-query latency.",
     ],
     tags: ["Flask", "PostgreSQL", "Supabase", "Gemini API", "Tailwind", "Render"],
     demo: "https://quiz-master-058v.onrender.com/",
@@ -156,11 +156,9 @@ export const projects: Project[] = [
     blurb:
       "Full-stack, role-based parking management app with reservation workflows, dynamic pricing, caching, and admin dashboards.",
     highlights: [
-      "Real-time spot tracking, automatic allocation, reservation history, and cost calculation.",
-      "Designed, versioned, and stress-tested 15+ REST API endpoints in Postman with schema validation and edge-case guards.",
-      "Background jobs with Celery + Redis across reservation, billing, and release workflows.",
+      "Built a full-stack role-based application featuring responsive design, reservation workflows, dynamic pricing, Redis caching, Celery background jobs, and admin/user dashboards; designed and verified REST APIs via Postman.",
     ],
-    tags: ["Flask", "Vue.js", "Redis", "Celery", "SQLite", "REST API"],
+    tags: ["Flask", "Vue.js", "Redis", "Celery", "SQLite", "Bootstrap", "Render"],
     demo: "https://parking-lot-app1.onrender.com/",
     github: "https://github.com/Ritik-Gupta8/Parking_Lot_v2",
   },
@@ -182,45 +180,48 @@ export type TimelineItem = {
   title: string;
   org: string;
   period: string;
-  detail: string;
+  detail: string | string[];
   kind: "education" | "experience" | "certification";
 };
 
 export const timeline: TimelineItem[] = [
   {
     kind: "education",
-    title: "B.S. in Data Science and Applications",
-    org: "Indian Institute of Technology, Madras",
+    title: "B.S. (Diploma in Programming)",
+    org: "Indian Institute of Technology Madras",
     period: "Sep 2023 – Nov 2025",
-    detail: "Chennai, India — Diploma in Programming.",
+    detail: "Chennai, India",
   },
   {
     kind: "experience",
     title: "Full-Stack Web Development Intern",
     org: "Jyesta Corporate Entity",
     period: "Sep – Nov 2025",
-    detail:
-      "Built and shipped backend features: REST API design, database schema, and third-party API integration.",
+    detail: [
+      "Strengthened full-stack development fundamentals through hands-on practice with React.js, Node.js, JavaScript (ES6+), SQL, and Git/GitHub during a structured virtual internship.",
+      "Built and tested REST APIs, CRUD workflows, responsive UI components, and database operations while following modern software engineering practices and version control workflows.",
+      "Improved understanding of frontend-backend integration, debugging, authentication concepts, database design, and collaborative development using Git-based workflows.",
+    ],
   },
   {
     kind: "certification",
-    title: "Generative AI Leader — Career Launchpad",
+    title: "Google Cloud Career Launchpad: Generative AI Leader",
     org: "Google Cloud",
     period: "Jan – Apr 2026",
-    detail: "Foundation models, RAG, AI agents, and responsible AI on GCP.",
+    detail: "Foundation models, RAG, AI agents, responsible AI on GCP.",
   },
   {
     kind: "certification",
     title: "AWS Academy Graduate: Cloud Foundations",
-    org: "Amazon Web Services",
+    org: "AWS",
     period: "May 2026",
-    detail: "Cloud fundamentals, core AWS services, and architecture basics.",
+    detail: "Core AWS services, infrastructure management, and cloud security basics.",
   },
   {
     kind: "education",
     title: "B.Sc. in Mathematics, Physics & Economics",
     org: "Chhatrapati Sahuji Maharaj University",
-    period: "Aug 2019 – Aug 2022",
-    detail: "Kanpur, India.",
+    period: "Aug 2019 – Sep 2022",
+    detail: "Kanpur, India",
   },
 ];
