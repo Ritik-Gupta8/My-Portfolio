@@ -61,14 +61,14 @@ export default function Hero() {
 
   return (
     <section id="home" className="relative mx-auto max-w-6xl px-5 pt-32 pb-20 md:pt-40">
-      <div className="grid gap-4 md:grid-cols-3 md:grid-rows-[auto_auto]">
+      <div className="grid gap-4 md:grid-cols-3">
         {/* Main intro tile */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
           onMouseMove={onMove}
-          className="spotlight-card col-span-2 rounded-3xl border border-white/10 bg-white/[0.03] p-7 backdrop-blur-xl sm:p-9"
+          className="spotlight-card md:col-span-2 rounded-3xl border border-white/10 bg-white/[0.03] p-7 backdrop-blur-xl sm:p-9"
         >
           <span className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-4 py-1.5 text-xs text-muted">
             <span className="relative flex h-2 w-2">
@@ -155,11 +155,11 @@ export default function Hero() {
               </a>
             </div>
           </div>
-
-          
         </motion.div>
+      </div>
 
-        {/* Stats tiles */}
+      {/* Stats tiles */}
+      <div className="mt-4 grid grid-cols-2 gap-4 md:grid-cols-4">
         {profile.stats.map((s, i) => (
           <motion.div
             key={s.label}
